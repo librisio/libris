@@ -18,7 +18,7 @@
 	width: 17.5px;
 	height: 17.5px;
 	object-fit: cover;
-	background: var(--warning_bg); mask: url("https://raw.githubusercontent.com/librisio/libris/master/media/icons/error.png") no-repeat center/contain;
+	background: var(--warning_bg); mask: url("https://raw.githubusercontent.com/librisio/libris/master/media/icons/error.webp") no-repeat center/contain;
 }
 .warning > :nth-child(2) {
 	flex-shrink: 0;
@@ -54,7 +54,7 @@
 	height: 17.5px;
 	object-fit: cover;
 	background: var(--note_bg);
-	mask: url("https://raw.githubusercontent.com/librisio/libris/master/media/icons/megaphone.png") no-repeat center/contain;
+	mask: url("https://raw.githubusercontent.com/librisio/libris/master/media/icons/megaphone.webp") no-repeat center/contain;
 }
 .note > :nth-child(2) {
 	flex-shrink: 0;

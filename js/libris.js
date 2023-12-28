@@ -231,6 +231,7 @@ robots="index, follow",
 charset="UTF-8",
 viewport="width=device-width, initial-scale=1",
 favicon="/favicon.ico",
+info="X",
 }={}){
 this.author=author;
 this.title=title;
@@ -301,7 +302,7 @@ default_theme="dark_theme",
 include={},
 exclude=[],
 extra_files=[],
-language_order=[],
+navigation_order=[],
 chapter_order=[],
 title_order=[],
 templates={},
@@ -309,7 +310,7 @@ sidebar_images={},
 socials={},
 headless=false,
 hide_name=false,
-enforce_languages=false,
+enforce_navigations=false,
 sort_alphabetical=true,
 allow_save_on_system_error=true,
 tab_size=4,
@@ -328,7 +329,7 @@ default_theme:{type:"string", default:"dark_theme"},
 include:{type:["array","object"], default:[]},
 exclude:{type:"array", default:[]},
 extra_files:{type:"array", default:[]},
-language_order:{type:"array", default:[]},
+navigation_order:{type:"array", default:[]},
 chapter_order:{type:["array","object"], default:[]},
 title_order:{type:["array","object"], default:[]},
 templates:{type:"object", default:{}},
@@ -336,7 +337,7 @@ sidebar_images:{type:"object", default:{}},
 socials:{type:"object", default:{}},
 headless:{type:"boolean", default:false},
 hide_name:{type:"boolean", default:false},
-enforce_languages:{type:"boolean", default:false},
+enforce_navigations:{type:"boolean", default:false},
 sort_alphabetical:{type:"boolean", default:true},
 allow_save_on_system_error:{type:"boolean", default:true},
 tab_size:{type:"number", default:4},
@@ -360,8 +361,8 @@ this.include_links=include_links;
 this.include_scripts=include_scripts;
 this.tab_size=tab_size;
 this.config_path=new vlib.Path(config_path);
-this.enforce_languages=enforce_languages;
-this.language_order=language_order;
+this.enforce_navigations=enforce_navigations;
+this.navigation_order=navigation_order;
 this.chapter_order=chapter_order;
 this.title_order=title_order;
 this.templates=templates;
@@ -543,7 +544,7 @@ endpoint:endpoint,
 method:method,
 params:params,
 compress:compress,
-reject_unauthorized:false,
+reject_unauthorized:Client.host==="test.vandenberghinc.com"||Client.host==="127.0.0.1",
 headers:{
 "Authorization":`Bearer ${this.api_key}`,
 }
