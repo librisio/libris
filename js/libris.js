@@ -14,7 +14,6 @@ hover_fg="#FFFFFF",
 codeblock_fg="#FFFFFF",
 codeline_fg="#FFFFFF",
 anchor_fg=null,
-anchor_underline_fg=null,
 bg="#05030C",
 bg_brightness=100,
 bg_blur=0,
@@ -46,7 +45,7 @@ token_parameter="#F9AE58",
 tag_required="#F45D5D",
 tag_property="#F9AE58",
 tag_member="#009051",
-tag_keyword="#C78BF0",
+tag_keyword="#EE8378",
 tag_experimental="#5795F3",
 tag_advised="#5795F3",
 tag_deprecated="#F45D5D",
@@ -84,7 +83,6 @@ this.tint_base=tint_base;
 this.codeblock_fg=codeblock_fg;
 this.codeline_fg=codeline_fg;
 this.anchor_fg=anchor_fg;
-this.anchor_underline_fg=anchor_underline_fg;
 this.bg=bg;
 this.bg_brightness=bg_brightness;
 this.bg_blur=bg_blur;
@@ -187,13 +185,13 @@ click_brightness:1.25,
 });
 const BLUE_THEME=new Theme({
 tint_fg:"#5795F3",
+note_bg:"#5795F3",
 bg:"#202133",
 topbar_bg:"#20213380",
 topbar_blur:5,
 sidebar_bg:"#202133",
 widget_bg:"#25273D",
 selected_bg:"#25273D",
-note_bg:"#25273D",
 codeblock_bg:"#25273D",
 codeline_bg:"#25273D",
 divider_bg:"#FFFFFF10",
@@ -205,14 +203,15 @@ click_brightness:1.4,
 const GREEN_THEME=new Theme({
 tint_fg:"#58B684",
 anchor_fg:"#53AC7D",
-anchor_underline_fg:"#53AC7D",
+token_type:"#58B684",
+method_get:"#58B684",
+note_bg:"#58B684",
 bg:"#102328",
 topbar_bg:"#10232880",
 topbar_blur:5,
 sidebar_bg:"#102328",
 widget_bg:"#17292D",
 selected_bg:"#17292D",
-note_bg:"#17292D",
 codeblock_bg:"#17292D",
 codeline_bg:"#17292D",
 divider_bg:"#FFFFFF10",
@@ -351,7 +350,7 @@ throw Error(`${this.config_path.str()}: Invalid value for parameter "default_the
 }
 this.name=name;
 this.hide_name=hide_name
-this.icon=icon!=null?icon:"https://raw.githubusercontent.com/vandenberghinc/public-storage/master/vandenberghinc/icon/triangle.small.png";
+this.icon=icon!=null?icon:"https://raw.githubusercontent.com/libris/libris/master/media/libris/symbol.128x128.webp";
 this.meta=meta;
 this.dark_theme=dark_theme;
 this.light_theme=light_theme;

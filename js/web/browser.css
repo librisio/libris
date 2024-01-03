@@ -1,3 +1,6 @@
+.force-repait {
+	transform: scale(1);
+}
 .warning {
 	margin: 0px;
 	padding: 15px 20px;
@@ -72,7 +75,7 @@
 a, .link {
 	cursor: pointer;
 	/*color: var(--anchor_fg);*/
-/*	text-decoration:  underline;*/
+	text-decoration:  none;
 	/*text-decoration-color: var(--anchor_underline_fg);*/
 /*	text-decoration-color: transparent;*/
 	background-image: var(--anchor_fg);
